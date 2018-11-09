@@ -5,3 +5,10 @@ class Person {
     print(firstName);
   }
 }
+
+void main() {
+  var person = new Person();
+
+  person.firstName = 'Alex';
+  person.printName();
+}
