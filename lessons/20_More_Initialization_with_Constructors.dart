@@ -1,13 +1,19 @@
-class Desk {
+void main() {
+  new Deck();
+}
+
+class Deck {
   List<Card> cards;
 
-  Desk() {
+  Deck() {
     var ranks = ['One', 'Two', 'Three', 'Four', 'Five'];
     var suits = ['Diamonds', 'Hearts', 'Clubs', 'Spades'];
 
     for (var suit in suits) {
       for (var rank in ranks) {
-        //
+        var card = new Card(rank, suit);
+
+        cards.add(card);
       }
     }
 
@@ -18,4 +24,6 @@ class Desk {
 class Card {
   String suit;
   String rank;
+
+  Card(this.rank, this.suit);
 }
